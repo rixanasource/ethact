@@ -30,7 +30,7 @@ export default function Sidebar() {
             className="w- h-8"
           />
         </div>
-        <h1 className="text-white text-lg font-bold">FAFOGOV</h1>
+        <h1 className="text-white text-lg font-bold">$FAFO</h1>
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
         </button>
