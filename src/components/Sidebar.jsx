@@ -28,7 +28,7 @@ export default function Sidebar() {
             <img
               src="./FAFO.png"
               alt="Logo"
-              className="w- h-8"
+              className="w-8 h-8"
             />
           </Link>
 
@@ -37,9 +37,20 @@ export default function Sidebar() {
           <h1 className="text-white text-lg font-bold">$FAFO</h1>
         </Link>
         <a href="https://x.com/fafooneth?s=21" target="_blank" rel="noopener noreferrer">
-          <X className="text-white" size={20} />
+          <img
+            src="./XLOGO.png"
+            alt="Logo"
+            className="w-4 h-4"
+          />
         </a>
 
+        <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
+          <img
+            src="./dextools.png"
+            alt="Logo"
+            className="w-4 h-4"
+          />
+        </a>
         <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
           <Send size={20} className="text-white" />
         </a>
