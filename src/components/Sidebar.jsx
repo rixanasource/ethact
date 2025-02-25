@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Instagram, Send } from "lucide-react";
+import { Menu, X, Instagram, Send, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -24,13 +24,25 @@ export default function Sidebar() {
       <div className="md:hidden fixed top-0 left-0 w-full bg-black p-4 flex justify-between items-center z-50">
 
         <div className="flex justify-center">
-          <img
-            src="./FAFO.png"
-            alt="Logo"
-            className="w- h-8"
-          />
+          <Link to="/">
+            <img
+              src="./FAFO.png"
+              alt="Logo"
+              className="w- h-8"
+            />
+          </Link>
+
         </div>
-        <h1 className="text-white text-lg font-bold">$FAFO</h1>
+        <Link to="/">
+          <h1 className="text-white text-lg font-bold">$FAFO</h1>
+        </Link>
+        <a href="https://x.com/fafooneth?s=21" target="_blank" rel="noopener noreferrer">
+          <X className="text-white" size={20} />
+        </a>
+
+        <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
+          <Send size={20} className="text-white" />
+        </a>
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
         </button>
@@ -44,7 +56,7 @@ export default function Sidebar() {
         {/* Navigation Links (No Logo on Mobile) */}
         <nav className=" flex-1 mt-16">
           {menus.map(({ label, action }) => (
-           <a 
+            <a
               key={label}
               href={action}
               className="block py-2 px-4 hover:bg-gray-800 uppercase"
@@ -80,7 +92,7 @@ export default function Sidebar() {
         {/* Navigation Links */}
         <nav className="flex-1">
           {menus.map(({ label, action }) => (
-            <a 
+            <a
               key={label}
               href={action}
               className="block py-2 px-4 hover:bg-gray-800 uppercase"
@@ -92,7 +104,9 @@ export default function Sidebar() {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-4 border-t border-gray-700 pt-4">
-          <X size={20} />
+          <a href="https://x.com/fafooneth?s=21" target="_blank" rel="noopener noreferrer">
+            <X className="text-white" size={20} />
+          </a>
           <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
             <Send size={20} className="cursor-pointer hover:text-blue-400 transition-colors" />
           </a>
@@ -101,3 +115,4 @@ export default function Sidebar() {
     </div>
   );
 }
+
