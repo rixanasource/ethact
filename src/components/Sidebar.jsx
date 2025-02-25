@@ -40,7 +40,7 @@ export default function Sidebar() {
           <X className="text-white" size={20} />
         </a>
 
-        <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
+        <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
           <Send size={20} className="text-white" />
         </a>
         <button onClick={() => setIsOpen(!isOpen)}>
@@ -70,8 +70,9 @@ export default function Sidebar() {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-4 border-t border-gray-700 pt-4">
-          <X size={20} />
-          <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/fafooneth?s=21" target="_blank" rel="noopener noreferrer">
+            <X size={20} /></a>
+          <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
             <Send size={20} className="cursor-pointer hover:text-blue-400 transition-colors" />
           </a>
         </div>
@@ -107,9 +108,10 @@ export default function Sidebar() {
           <a href="https://x.com/fafooneth?s=21" target="_blank" rel="noopener noreferrer">
             <X className="text-white" size={20} />
           </a>
-          <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
             <Send size={20} className="cursor-pointer hover:text-blue-400 transition-colors" />
           </a>
+
         </div>
       </div>
     </div>
