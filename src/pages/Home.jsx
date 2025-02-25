@@ -1,5 +1,6 @@
 
 import Tokenomics from "./Tokenomics";
+import ImageSlider from "./../components/ImageSlider"
 
 function Home({ isMobile }) {
     return (
@@ -33,12 +34,13 @@ function Home({ isMobile }) {
                         Musk has been linking “FAFO” to his work with the Department of Government Efficiency (DOGE), a Trump administration initiative he co-leads to streamline federal operations. “FAFO” could be a proposed enforcement arm for something like “Federal Agency for Financial Oversight,” tied to DOGE’s mission.
                     </p>
 
-                    {isMobile ??  <Tokenomics />}
+                    {isMobile ??  <><Tokenomics /></>}
                    
                 </div>
               
             </div>
             <Tokenomics />
+            <ImageSlider />
             <div className="bg-white px-2 py-2">
                 <div className="grid grid-cols-1 md:grid-cols-3">
                     <div className="md:col-span-2 p-6">
@@ -83,6 +85,7 @@ function Home({ isMobile }) {
                         </p>
 
                         <img className="mb-5 mt-8" src={`./PHOTO5.png`} />
+
                     </div>
                 </div>
             </div>
