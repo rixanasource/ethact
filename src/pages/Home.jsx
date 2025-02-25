@@ -39,7 +39,7 @@ function Home({ isMobile }) {
               
             </div>
             <Tokenomics />
-            <div className="bg-white px-8 py-8">
+            <div className="bg-white px-2 py-2">
                 <div className="grid grid-cols-1 md:grid-cols-3">
                     <div className="md:col-span-2 p-6">
                         <h1 className="  px-4 py-1 text-4xl font-bold uppercase">Featured</h1>
