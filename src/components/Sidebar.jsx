@@ -5,11 +5,24 @@ import { Link } from "react-router-dom";
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const menus = [
+    { label: "Home", action: "/" },
+    { label: "About", action: "/about" },
+    { label: "Community Chat", action: "/community-chat" },
+    { label: "Memes", action: "/memes" },
+    { label: "Buy/Trade", action: "/buy-trade" },
+    { label: "Workforce Costs", action: "/workforce-costs" },
+    { label: "Savings", action: "/savings" },
+    { label: "Regulations", action: "/regulations" },
+    { label: "Latest News", action: "/latest-news" },
+    { label: "Agent ID", action: "/agent-id" },
+    { label: "Merch Shop", action: "/merch-shop" },
+  ];
   return (
     <div>
       {/* Mobile Navbar */}
       <div className="md:hidden fixed top-0 left-0 w-full bg-black p-4 flex justify-between items-center z-50">
- 
+
         <div className="flex justify-center">
           <img
             src="./FAFO.png"
@@ -29,21 +42,7 @@ export default function Sidebar() {
       >
         {/* Navigation Links (No Logo on Mobile) */}
         <nav className=" flex-1 mt-16">
-          {[
-            { label: "Home", action: "/" },
-            { label: "About", action: "/about" },
-            { label: "Community Chat", action: "/community-chat" },
-            { label: "Memes", action: "/memes" },
-            { label: "Buy/Trade", action: "/buy-trade" },
-            { label: "Doge Clock", action: "/doge-clock" },
-            { label: "Workforce Costs", action: "/workforce-costs" },
-            { label: "Savings", action: "/savings" },
-            { label: "Regulations", action: "/regulations" },
-            { label: "Latest News", action: "/latest-news" },
-            { label: "Friends of Doge", action: "/friends-of-doge" },
-            { label: "Agent ID", action: "/agent-id" },
-            { label: "Merch Shop", action: "/merch-shop" },
-          ].map(({ label, action }) => (
+          {menus.map(({ label, action }) => (
             <Link
               key={label}
               to={action}
@@ -59,7 +58,9 @@ export default function Sidebar() {
         {/* Social Icons */}
         <div className="flex justify-center gap-4 border-t border-gray-700 pt-4">
           <X size={20} />
-          <Send size={20} />
+          <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
+            <Send size={20} className="cursor-pointer hover:text-blue-400 transition-colors" />
+          </a>
         </div>
       </div>
 
@@ -77,21 +78,7 @@ export default function Sidebar() {
 
         {/* Navigation Links */}
         <nav className="flex-1">
-          {[
-             { label: "Home", action: "/" },
-             { label: "About", action: "/about" },
-             { label: "Community Chat", action: "/community-chat" },
-             { label: "Memes", action: "/memes" },
-             { label: "Buy/Trade", action: "/buy-trade" },
-             { label: "Doge Clock", action: "/doge-clock" },
-             { label: "Workforce Costs", action: "/workforce-costs" },
-             { label: "Savings", action: "/savings" },
-             { label: "Regulations", action: "/regulations" },
-             { label: "Latest News", action: "/latest-news" },
-             { label: "Friends of Doge", action: "/friends-of-doge" },
-             { label: "Agent ID", action: "/agent-id" },
-             { label: "Merch Shop", action: "/merch-shop" },
-           ].map(({ label, action }) => (
+          {menus.map(({ label, action }) => (
             <Link
               key={label}
               to={action}
@@ -105,7 +92,9 @@ export default function Sidebar() {
         {/* Social Icons */}
         <div className="flex justify-center gap-4 border-t border-gray-700 pt-4">
           <X size={20} />
-          <Send size={20} />
+          <a href="https://web.telegram.org/k/#@fafogov" target="_blank" rel="noopener noreferrer">
+            <Send size={20} className="cursor-pointer hover:text-blue-400 transition-colors" />
+          </a>
         </div>
       </div>
     </div>
