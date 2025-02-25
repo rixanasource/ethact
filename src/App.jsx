@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Home from './pages/Home';
 import About from './pages/About';
-
+import Tokenomics from "./pages/Tokenomics";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -22,8 +23,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home isMobile={isMobile} />} />
           <Route path="/about" element={<About />} />
+          <Route path="/tokenomics" element={<Tokenomics />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
 
   );

@@ -1,42 +1,44 @@
 
+import Tokenomics from "./Tokenomics";
+
 function Home({ isMobile }) {
     return (
         <>
-            <div
-                className={`relative w-full ${isMobile ? 'auto' : 'h-screen'}  bg-cover bg-center mb-8`}
-                style={{
-                    backgroundImage: "url('./ELON1.jpg')",
-                    backgroundSize: `100% ${isMobile ? 'auto' : '100%'}`,
-                    backgroundPosition: "top",
-                    backgroundRepeat: "no-repeat",
-                }}
-            >
+            <div className="bg-black top-0 text-center w-full text-xs text-gray-400 border-b border-gray-400 p-2">
+                THIS IS NOT AN OFFICIAL WEBSITE OF THE UNITED STATES GOVERNMENT
+            </div>
 
-                {/* Top Disclaimer */}
-                <div className="bg-black top-0 text-center w-full text-xs text-gray-400 p-2">
-                    THIS IS NOT AN OFFICIAL WEBSITE OF THE UNITED STATES GOVERNMENT
-                </div>
+            <div
+                className={`relative`}
+            >
+                <img className={`w-full ${isMobile ? 'auto' : 'h-screen'} mb-5`} src={`./ELON1.jpg`} />
+
+
                 {/* Content */}
-                <div className="relative mt-16 h-full  px-4 bottom-0">
+                <div className={`bg-black opacity-50 px-8 py-8 ${isMobile ? 'relative' : 'absolute bottom-0'}`}>
                     {/* Small Highlighted Text */}
-                    <span className="bg-black text-white px-4 py-1 text-xs sm:text-sm md:text-base font-bold uppercase">
+                    <span className="text-white px-4 py-1 text-xs sm:text-sm md:text-base font-bold uppercase">
                         “FAFO” stands for “F*** Around and Find Out”
                     </span>
 
                     {/* Main Heading */}
-                    <h1 className="bg-black mt-4 text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
+                    <h1 className=" mt-4 text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
                         Musk’s history with “FAFO”
                     </h1>
 
 
                     {/* Paragraph Text */}
-                    <p className=" bg-black mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+                    <p className=" mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-white">
                         “FAFO” stands for “F*** Around and Find Out,” a slang phrase implying that actions have consequences. Musk has used this term on multiple occasions, first in a tweet in December 2022 after suspending Kanye West’s Twitter account for posting a swastika and violating rules against incitement to violence. Musk tweeted “FAFO” as a succinct warning that West had pushed boundaries and faced the repercussions.
                         Musk has been linking “FAFO” to his work with the Department of Government Efficiency (DOGE), a Trump administration initiative he co-leads to streamline federal operations. “FAFO” could be a proposed enforcement arm for something like “Federal Agency for Financial Oversight,” tied to DOGE’s mission.
                     </p>
 
+                    {isMobile ??  <Tokenomics />}
+                   
                 </div>
+              
             </div>
+            <Tokenomics />
             <div className="bg-white px-8 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-3">
                     <div className="md:col-span-2 p-6">
@@ -51,6 +53,9 @@ function Home({ isMobile }) {
 
                             On top of that, the “America First” approach was all about breaking free from long-standing international commitments that didn’t seem to give the U.S. enough in return. Whether it was pulling out of climate deals or questioning global alliances, it was a statement that America would no longer play second fiddle. It’s like saying, “Let’s focus on what’s best for us right now—no more playing nice just for the sake of it.”
                         </p>
+                        
+
+                        <img className="mb-5 mt-8" src={`./FAFO2.JPG`} />
                     </div>
                     <div className="p-6">
                         <h1 className="  px-4 py-1 text-4xl font-bold uppercase">NEWS</h1>
@@ -76,6 +81,8 @@ function Home({ isMobile }) {
 
                             <span><a className="text-blue-950 underline" target="_blank" href="https://www.financialexpress.com/trending/fafo-what-it-means-and-why-its-trending-musk-calls-it-awesome-amid-trumps-colombia-clash/3727289/"> Source-</a> </span>
                         </p>
+
+                        <img className="mb-5 mt-8" src={`./PHOTO5.png`} />
                     </div>
                 </div>
             </div>
@@ -94,10 +101,9 @@ function YouTubeEmbed({ id }) {
                 <iframe className="w-full h-full rounded-lg shadow-lg"
                     src={`https://www.youtube.com/embed/${id}`}
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen>
                 </iframe>
             </div>
         </div>

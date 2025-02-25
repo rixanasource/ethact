@@ -8,15 +8,15 @@ export default function Sidebar() {
   const menus = [
     { label: "Home", action: "/" },
     { label: "About", action: "/about" },
-    { label: "Community Chat", action: "/community-chat" },
-    { label: "Memes", action: "/memes" },
-    { label: "Buy/Trade", action: "/buy-trade" },
-    { label: "Workforce Costs", action: "/workforce-costs" },
-    { label: "Savings", action: "/savings" },
-    { label: "Regulations", action: "/regulations" },
-    { label: "Latest News", action: "/latest-news" },
-    { label: "Agent ID", action: "/agent-id" },
-    { label: "Merch Shop", action: "/merch-shop" },
+    { label: "Tokenomics", action: "/tokenomics" },
+    { label: "Telegram Community", action: "/community-chat" },
+    { label: "DEXTools", action: "/memes" },
+    { label: "Dexscreener", action: "/workforce-costs" },
+    { label: "Etherscan", action: "/savings" },
+    { label: "Uniswap", action: "/regulations" },
+    { label: "Coingecko", action: "https://" },
+    { label: "Coinmarketcap", action: "/agent-id" },
+    { label: "Developer", action: "https://t.me/Monstergreen" },
   ];
   return (
     <div>
@@ -43,14 +43,14 @@ export default function Sidebar() {
         {/* Navigation Links (No Logo on Mobile) */}
         <nav className=" flex-1 mt-16">
           {menus.map(({ label, action }) => (
-            <Link
+           <a 
               key={label}
-              to={action}
+              href={action}
               className="block py-2 px-4 hover:bg-gray-800 uppercase"
               onClick={() => setIsOpen(false)} // Close sidebar on mobile
             >
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -65,7 +65,7 @@ export default function Sidebar() {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex fixed top-0 left-0 h-full bg-black text-white w-64 p-6 flex-col">
+      <div className="hidden md:flex fixed top-0 left-0 h-full bg-black text-white w-64 p-6 flex-col border-r-2 border-gray-500">
         {/* Logo on Desktop */}
         <h1 className="text-white text-lg font-bold">FAFOGOV</h1>
         <div className="mb-6 flex justify-center">
@@ -79,13 +79,13 @@ export default function Sidebar() {
         {/* Navigation Links */}
         <nav className="flex-1">
           {menus.map(({ label, action }) => (
-            <Link
+            <a 
               key={label}
-              to={action}
+              href={action}
               className="block py-2 px-4 hover:bg-gray-800 uppercase"
             >
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
 
