@@ -9,7 +9,14 @@ export default function Sidebar() {
     <div>
       {/* Mobile Navbar */}
       <div className="md:hidden fixed top-0 left-0 w-full bg-black p-4 flex justify-between items-center z-50">
-        <h1 className="text-white text-lg font-bold">fafogov</h1>
+ 
+        <div className="flex justify-center">
+          <img
+            src="./FAFO.png"
+            alt="Logo"
+            className="w- h-8"
+          />
+        </div>
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
         </button>
@@ -17,11 +24,11 @@ export default function Sidebar() {
 
       {/* Mobile Sidebar - Fullscreen Slide Down */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen bg-black text-white p-6 flex flex-col transition-all duration-300 overflow-y-auto ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        className={`z-10 fixed top-0 left-0 w-full h-screen bg-black text-white p-6 flex flex-col transition-all duration-300 overflow-y-auto ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
           } md:hidden`}
       >
         {/* Navigation Links (No Logo on Mobile) */}
-        <nav className="flex-1 mt-16">
+        <nav className=" flex-1 mt-16">
           {[
             { label: "Home", action: "/" },
             { label: "About", action: "/about" },
@@ -59,10 +66,10 @@ export default function Sidebar() {
       {/* Desktop Sidebar */}
       <div className="hidden md:flex fixed top-0 left-0 h-full bg-black text-white w-64 p-6 flex-col">
         {/* Logo on Desktop */}
-        <h1 className="text-white text-lg font-bold">fafogov</h1>
+        <h1 className="text-white text-lg font-bold">FAFOGOV</h1>
         <div className="mb-6 flex justify-center">
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png"
+            src="./FAFO.png"
             alt="Logo"
             className="w-20 h-20 rounded-full"
           />
