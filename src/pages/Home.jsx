@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import Tokenomics from "./Tokenomics";
 import ImageSlider from "./../components/ImageSlider"
+import VideoPlayer from "../components/VideoPlayer";
 
 function Home({ isMobile }) {
     return (
@@ -19,15 +20,20 @@ function Home({ isMobile }) {
                 {/* Content */}
                 <div className={`bg-black opacity-50 px-8 py-8 ${isMobile ? 'relative' : 'absolute bottom-0'}`}>
                     {/* Small Highlighted Text */}
-                    <span className="text-white px-4 py-1 text-xs sm:text-sm md:text-base font-bold uppercase">
+                    <span className="text-white text-xs sm:text-sm md:text-base font-bold uppercase">
                         “FAFO” stands for “F*** Around and Find Out”
                     </span>
 
+                    <p className="mt-4 text-white text-xs sm:text-sm md:text-base font-bold">THE IDEA OF</p>
                     {/* Main Heading */}
-                    <h1 className=" mt-4 text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-                        FAFO : musk’s Badass enforcer
+                    <h1 className=" ext-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
+                        Federal Agency for Financial Oversight
                     </h1>
 
+                    <p className=" mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-white">
+                        Fafo stands for….<br />
+                        The D.O.G.E. Alt
+                    </p>
 
                     {/* Paragraph Text */}
                     <p className=" mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-white">
@@ -86,8 +92,11 @@ function Home({ isMobile }) {
                     <div className="p-6">
                         <h1 className="  px-4 py-1 text-4xl font-bold uppercase">Featured</h1>
                         <hr className="border-t-2 border-dotted border-gray-400 my-6" />
-        
+                        <div className="mb-4">
+                            <VideoPlayer video={'./video1.mp4'} />
+                        </div>
                         <img className="mb-5" src={`./PHOTO1.jpg`} />
+                        <img className="mb-5" src={`./FAFO3.jpeg`} />
                         <img className="mb-5 mt-8" src={`./PHOTO5.png`} />
                         <img className="mb-5 mt-8" src={`./FAFO2.JPG`} />
                     </div>
@@ -136,8 +145,8 @@ function YouTubeEmbed({ id }) {
             <div className="w-full max-w-4xl aspect-video">
 
                 <iframe className="w-full h-full shadow-lg"
-                  ref={iframeRef}
-                  src={`https://www.youtube.com/embed/${id}?enablejsapi=1&autoplay=1&mute=1`}
+                    ref={iframeRef}
+                    src={`https://www.youtube.com/embed/${id}?enablejsapi=1&autoplay=1&mute=1`}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
