@@ -1,4 +1,5 @@
 
+import { useEffect, useRef } from "react";
 import Tokenomics from "./Tokenomics";
 import ImageSlider from "./../components/ImageSlider"
 
@@ -77,21 +78,17 @@ function Home({ isMobile }) {
                             <span><a className="text-blue-950 underline" target="_blank" href="https://www.financialexpress.com/trending/fafo-what-it-means-and-why-its-trending-musk-calls-it-awesome-amid-trumps-colombia-clash/3727289/"> Source-</a> </span>
                         </p>
 
+                        <YouTubeEmbed id="ddzlVzc_ypE?si=vCKa226aXTM5ccov" />
+                        <YouTubeEmbed id="RK91Ji6GCZ8?si=wiMg0sptC4_ebn6C" />
+                        <YouTubeEmbed id="dIaoZqMrbCo?si=sF4Mnna3MC6W4K9-" />
 
                     </div>
                     <div className="p-6">
                         <h1 className="  px-4 py-1 text-4xl font-bold uppercase">Featured</h1>
                         <hr className="border-t-2 border-dotted border-gray-400 my-6" />
-                        <YouTubeEmbed id="ddzlVzc_ypE?si=vCKa226aXTM5ccov" />
-                        <YouTubeEmbed id="RK91Ji6GCZ8?si=wiMg0sptC4_ebn6C" />
-                        <YouTubeEmbed id="dIaoZqMrbCo?si=sF4Mnna3MC6W4K9-" />
+        
                         <img className="mb-5" src={`./PHOTO1.jpg`} />
-
-
-
-
                         <img className="mb-5 mt-8" src={`./PHOTO5.png`} />
-
                         <img className="mb-5 mt-8" src={`./FAFO2.JPG`} />
                     </div>
                 </div>
@@ -104,12 +101,43 @@ function Home({ isMobile }) {
 
 
 function YouTubeEmbed({ id }) {
+    const iframeRef = useRef(null);
+
+    useEffect(() => {
+        // Load the YouTube API if not already loaded
+        if (!window.YT) {
+            const script = document.createElement("script");
+            script.src = "https://www.youtube.com/iframe_api";
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        // Wait for API to be ready
+        const onYouTubeIframeAPIReady = () => {
+            if (window.YT) {
+                new window.YT.Player(iframeRef.current, {
+                    events: {
+                        onReady: (event) => event.target.playVideo(),
+                    },
+                });
+            }
+        };
+
+        // Check if API is already available, otherwise, wait for it
+        if (window.YT && window.YT.Player) {
+            onYouTubeIframeAPIReady();
+        } else {
+            window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+        }
+    }, []);
+
     return (
-        <div className="flex justify-normal items-start h-auto mb-4">
+        <div className="flex justify-center items-center h-auto mt-6 mb-4">
             <div className="w-full max-w-4xl aspect-video">
 
                 <iframe className="w-full h-full rounded-lg shadow-lg"
-                    src={`https://www.youtube.com/embed/${id}`}
+                  ref={iframeRef}
+                  src={`https://www.youtube.com/embed/${id}?enablejsapi=1&autoplay=1&mute=1`}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
