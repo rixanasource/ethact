@@ -43,7 +43,7 @@ function Tokenomics() {
 
           {/* Wallet Address (Copy Feature) */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 border-b border-gray-700 pb-2">
-            <span className="text-gray-400">Wallet Address:</span>
+            <span className="text-gray-400">Contract Address:</span>
             <div className="flex items-center gap-2">
               <span className="font-mono text-white cursor-pointer hover:text-gray-300 transition" onClick={copyToClipboard}>
                 {walletAddress}
