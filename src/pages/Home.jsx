@@ -135,7 +135,7 @@ function YouTubeEmbed({ id }) {
         <div className="flex justify-center items-center h-auto mt-6 mb-4">
             <div className="w-full max-w-4xl aspect-video">
 
-                <iframe className="w-full h-full rounded-lg shadow-lg"
+                <iframe className="w-full h-full shadow-lg"
                   ref={iframeRef}
                   src={`https://www.youtube.com/embed/${id}?enablejsapi=1&autoplay=1&mute=1`}
                     title="YouTube video player"
