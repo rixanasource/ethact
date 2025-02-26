@@ -80,7 +80,7 @@ function Home({ isMobile }) {
 
                     </div>
                     <div className="p-6">
-                        <h1 className="  px-4 py-1 text-4xl font-bold uppercase">Media</h1>
+                        <h1 className="  px-4 py-1 text-4xl font-bold uppercase">Featured</h1>
                         <hr className="border-t-2 border-dotted border-gray-400 my-6" />
                         <YouTubeEmbed id="ddzlVzc_ypE?si=vCKa226aXTM5ccov" />
                         <YouTubeEmbed id="RK91Ji6GCZ8?si=wiMg0sptC4_ebn6C" />
