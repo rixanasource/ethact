@@ -24,7 +24,7 @@ function Home({ isMobile }) {
 
                     {/* Main Heading */}
                     <h1 className=" mt-4 text-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-                        Musk’s history with “FAFO”
+                        Elon Musk Recently proposed (FAFO)
                     </h1>
 
 
