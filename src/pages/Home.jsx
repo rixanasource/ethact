@@ -30,8 +30,8 @@ function Home({ isMobile }) {
                         Federal Agency for Financial Oversight
                     </h1>
 
-                    <p className=" mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-white">
-                        Fafo stands for….<br />
+                    <p className=" mt-4 text-center max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-white">
+
                         The D.O.G.E. Alt
                     </p>
 
