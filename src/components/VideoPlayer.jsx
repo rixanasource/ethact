@@ -6,14 +6,14 @@ const VideoPlayer = ({ video }) => {
 
 
     useEffect(() => {
-        if (videoRef.current) {
-            if (playing) {
-                videoRef.current.pause();
-            } else {
-                videoRef.current.play();
-            }
-            setPlaying(!playing);
-        }
+        // if (videoRef.current) {
+        //     if (playing) {
+        //         videoRef.current.pause();
+        //     } else {
+        //         videoRef.current.play();
+        //     }
+        //     setPlaying(!playing);
+        // }
     }, [])
 
     return (
@@ -21,9 +21,6 @@ const VideoPlayer = ({ video }) => {
         <video
             ref={videoRef}
             className="w-full shadow-lg"
-            autoPlay
-            muted
-            loop
             controls
         >
             <source src={`./${video}`} type="video/mp4" />
