@@ -20,13 +20,13 @@ function Home({ isMobile }) {
                 {/* Content */}
                 <div className={`bg-black opacity-50 px-8 py-8 ${isMobile ? 'relative' : 'absolute bottom-0'}`}>
                     {/* Small Highlighted Text */}
-                    <span className="text-white text-xs sm:text-sm md:text-base font-bold uppercase">
+                    <span className="text-center text-white text-xs sm:text-sm md:text-base font-bold uppercase">
                         “FAFO” stands for “F*** Around and Find Out”
                     </span>
 
-                    <p className="mt-4 text-white text-xs sm:text-sm md:text-base font-bold">THE IDEA OF</p>
+                    <p className="mt-4 text-center text-white text-xs sm:text-sm md:text-base font-bold">THE IDEA OF</p>
                     {/* Main Heading */}
-                    <h1 className=" ext-3xl text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
+                    <h1 className=" ext-3xl text-center text-white sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
                         Federal Agency for Financial Oversight
                     </h1>
 
