@@ -14,9 +14,8 @@ function Home({ isMobile }) {
             <div
                 className={`relative`}
             >
-                <img className={`w-full ${isMobile ? 'auto' : 'h-screen'} mb-5`} src={`./ELON1.jpg`} />
 
-
+                <VideoPlayer video={'./video1.mp4'} />
                 {/* Content */}
                 <div className={`bg-black opacity-50 px-8 py-8 ${isMobile ? 'relative' : 'absolute bottom-0'}`}>
                     {/* Small Highlighted Text */}
@@ -31,7 +30,7 @@ function Home({ isMobile }) {
                     </h1>
 
                     <p className=" mt-4 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-white">
-                        Fafo stands for….<br />
+
                         The D.O.G.E. Alt
                     </p>
 
