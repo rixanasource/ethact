@@ -26,9 +26,9 @@ function Home({ isMobile }) {
                 {/* Content */}
                 <div className={`bg-black opacity-50 px-8 py-8 ${isMobile ? 'relative' : 'absolute bottom-0'}`}>
                     {/* Small Highlighted Text */}
-                    <span className="text-center text-white text-xs sm:text-sm md:text-base font-bold uppercase">
+                    <p className="text-center text-white text-xs sm:text-sm md:text-base font-bold uppercase">
                         “FAFO” stands for “F*** Around and Find Out”
-                    </span>
+                    </p>
 
                     <p className="mt-4 text-center text-white text-xs sm:text-sm md:text-base font-bold">THE IDEA OF</p>
                     {/* Main Heading */}
