@@ -92,13 +92,14 @@ function Home({ isMobile }) {
                     <div className="p-6">
                         <h1 className="  px-4 py-1 text-4xl font-bold uppercase">Featured</h1>
                         <hr className="border-t-2 border-dotted border-gray-400 my-6" />
-                        <div className="mb-4">
-                            <VideoPlayer video={'./video1.mp4'} />
-                        </div>
+
                         <img className="mb-5" src={`./PHOTO1.jpg`} />
                         <img className="mb-5" src={`./FAFO3.jpeg`} />
                         <img className="mb-5 mt-8" src={`./PHOTO5.png`} />
                         <img className="mb-5 mt-8" src={`./FAFO2.JPG`} />
+                        <div className="mb-4">
+                            <VideoPlayer video={'./video1.mp4'} />
+                        </div>
                     </div>
                 </div>
             </div>
