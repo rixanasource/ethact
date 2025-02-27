@@ -7,9 +7,15 @@ import VideoPlayer from "../components/VideoPlayer";
 function Home({ isMobile }) {
     return (
         <>
-            <div className="bg-black top-0 text-center w-full text-xs text-gray-400 border-b border-gray-400 p-2">
-                THIS IS NOT AN OFFICIAL WEBSITE OF THE UNITED STATES GOVERNMENT
+            <div className="relative bg-black top-0 text-center w-full text-xs text-gray-400 border-b border-gray-400">
+                <p className="absolute opacity-70 bottom-2 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white text-[10px] font-bold px-3 py-1 rounded-md w-max text-center leading-tight">
+                    THIS IS NOT AN OFFICIAL WEBSITE <br /> OF THE UNITED STATES GOVERNMENT
+                </p>
+                <img className="w-screen" src="./BANNER.gif" alt="Banner" />
             </div>
+
+
+
 
             <div
                 className={`relative`}
