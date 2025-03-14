@@ -7,7 +7,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
         {/* Left - Branding */}
         <div>
-          <h2 className="text-xl font-bold">FAFOGOV</h2>
+          <h2 className="text-xl font-bold">The Ethereum Act</h2>
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} All Rights Reserved.</p>
         </div>
 

@@ -26,7 +26,7 @@ export default function Sidebar() {
         <div className="flex justify-center">
           <Link to="/">
             <img
-              src="./FAFO.png"
+              src="./TEA.png"
               alt="Logo"
               className="w-8 h-8"
             />
@@ -34,7 +34,7 @@ export default function Sidebar() {
 
         </div>
         <Link to="/">
-          <h1 className="text-white text-lg font-bold">$FAFO</h1>
+          <h1 className="text-white text-lg font-bold">$Ethact</h1>
         </Link>
         <a href="https://x.com/fafooneth?s=21" target="_blank" rel="noopener noreferrer">
           <img
@@ -42,15 +42,7 @@ export default function Sidebar() {
             alt="Logo"
             className="w-4 h-4"
           />
-        </a>
-
-        <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
-          <img
-            src="./dextools.png"
-            alt="Logo"
-            className="w-4 h-4"
-          />
-        </a>
+        </a> 
         <a href="https://t.me/fafogov" target="_blank" rel="noopener noreferrer">
           <Send size={20} className="text-white" />
         </a>
@@ -97,10 +89,10 @@ export default function Sidebar() {
       {/* Desktop Sidebar */}
       <div className="hidden md:flex fixed top-0 left-0 h-full bg-black text-white w-64 p-6 flex-col border-r-2 border-gray-500">
         {/* Logo on Desktop */}
-        <h1 className="text-white text-lg font-bold">FAFOGOV</h1>
-        <div className="mb-6 flex justify-center">
+        <h1 className="text-white text-lg font-bold">$Ethact</h1>
+        <div className="mb-6 mt-6 flex justify-center">
           <img
-            src="./FAFO.png"
+            src="./TEA.png"
             alt="Logo"
             className="w-20 h-20 rounded-full"
           />
