@@ -7,8 +7,8 @@ export default function Sidebar() {
 
   const menus = [
     { label: "Home", action: "/" },
-    { label: "About", action: "/about" },
-    { label: "Tokenomics", action: "/tokenomics" },
+    { label: "About", action: "/#about" },
+    { label: "Tokenomics", action: "/#tokenomics" },
     { label: "Telegram Community", action: "/community-chat" },
     { label: "DEXTools", action: "/memes" },
     { label: "Dexscreener", action: "/workforce-costs" },

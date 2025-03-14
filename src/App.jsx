@@ -1,17 +1,11 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Tokenomics from "./pages/Tokenomics";
 import Footer from "./components/Footer";
-
-// Detect if the app is running on IPFS
-const isIPFS = window.location.pathname.startsWith("/ipfs/") || 
-               window.location.pathname.startsWith("/ipns/");
-
-// Use HashRouter for IPFS, BrowserRouter for normal hosting
-const Router = isIPFS ? HashRouter : BrowserRouter;
+ 
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
